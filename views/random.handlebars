@@ -1,0 +1,23 @@
+<div class="recipe-body">
+	<h1 class="secondary-header">Random Recipes</h1>
+	<div>
+		<h3 class="primary-header">{{title}}</h3>
+		<img class="recipe-pic" src={{imageUrl}}>
+	</div>
+
+	<h4 class="secondary-header">Ingredients</h4>
+	<ul>
+		{{#each ingredients}}
+		<li><a class="ingredient" target="blank" href="https://en.wikipedia.org/wiki/{{this.name}}">{{this.original}}</a></li>
+		{{/each}}
+	</ul>
+
+	<h4 class="secondary-header">Instructions</h4>
+	<ul>
+		{{#each instructions}}
+		<li class="instruction">Step {{this.number}}: {{this.step}}</li>
+		{{/each}}
+	</ul>
+
+	<a href="/random" class="btn btn-primary">Get Another</a>
+</div>

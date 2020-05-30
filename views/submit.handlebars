@@ -1,0 +1,82 @@
+<div class="submit-body">
+  <h1 class="primary-header">Submit Your Own Recipes</h1>
+
+  <form action="/submit" method="post">
+  	  <div class="form-group">
+      	<label for="user">Name</label>
+      	<input type="text" id="user" name="user" placeholder="Enter your name">
+    	</div>
+    	<div class="form-group">
+      	<label for="email">Email</label>
+      	<input type="email" id="email" name="email" placeholder="Enter email">
+    	</div>
+    	<div class="form-group">
+      	<label for="title">Recipe Title</label>
+      	<input type="text" id="title" name="recipeTitle" placeholder="Enter title">
+    	</div>
+    	<div class="form-group">
+      	<label for="minutes">Minutes to ready</label>
+      	<input type="number" id="minutes" name="title" placeholder="Enter time in minutes">
+    	</div>
+    	<div class="form-group">
+      	<label for="servings">Servings</label>
+      	<input type="number" id="servings" name="servings" placeholder="Enter servings">
+    	</div>
+
+      <div class="row">
+        <div class="col-md-6">
+        	<div id="ingredForm">
+        		<h5 class="secondary-header">Ingredients</h5>
+        		<P>Amount | Name</P>
+        		<div class="form-group">
+        			<input type="text" name="amount1" placeholder="ex: .5 cup">
+        			<input type="text" name="name1" placeholder="ex: milk">
+        		</div>
+        		<div class="form-group">
+        			<input type="text" name="amount2">
+        			<input type="text" name="name2">
+        		</div>
+        		<div class="form-group">
+        			<input type="text" name="amount3">
+        			<input type="text" name="name3">
+        		</div>
+        		<div class="form-group">
+        			<input type="text" name="amount4">
+        			<input type="text" name="name4">
+        		</div>
+        		<div class="form-group">
+        			<input type="text" name="amount5">
+        			<input type="text" name="name5">
+        		</div>
+        	 </div>
+      	   <p onclick="addMoreIngredientFields()" class="btn btn-secondary">Add more ingredients</p>
+         </div>
+
+        <div class="col-md-6">
+        	<div id="instructForm">
+        		<h5 class="secondary-header">Instructions</h5>
+            <p>One step per line</p>
+        		<div class="form-group">
+        			<input type="text" name="step1" placeholder="step 1">
+        		</div>
+        		<div class="form-group">
+        			<input type="text" name="step2" placeholder="step 2">
+        		</div>
+        		<div class="form-group">
+        			<input type="text" name="step3" placeholder="step 3">
+        		</div>
+        		<div class="form-group">
+        			<input type="text" name="step4" placeholder="step 4">
+        		</div>
+        		<div class="form-group">
+        			<input type="text" name="step5" placeholder="step 5">
+        		</div>
+        	</div>
+        	<p onclick="addMoreInstructionFields()" class="btn btn-secondary">Add more instructions</p>
+          </div>
+        </div>
+    	<div>
+    		<button type="submit" class="btn btn-primary btn-block">Submit</button>
+    	</div>
+  </form>
+</div>

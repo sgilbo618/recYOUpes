@@ -1,0 +1,32 @@
+<div class="search-body">
+	<h1 class="primary-header">Search Recipes</h1>
+	<div class="search-box">
+		<div class="search-form">
+			<h5>Search by cuisine type, dish name, or ingedient</h5>
+			<form action="/search" method="post" enctype="application/x-www-form-urlencoded">
+				<input type="hidden" name="number" value="0">
+				<input id="recipeSearch" type="text" name="searchTerm">
+				<input class="btn btn-primary" type="submit" value="Submit">
+			</form>
+		</div>
+
+		<div>
+			<h3 class="secondary-header">Popular Searches</h3>
+			<div id="scrollbox">
+				<p class="suggestions">Poke</p>
+				<p class="suggestions">Ancient grains</p>
+				<p class="suggestions">Chai seed</p>
+				<p class="suggestions">Steak</p>
+				<p class="suggestions">Hamburger</p>
+				<p class="suggestions">Chocolate brownie</p>
+				<p class="suggestions">Chili con carne</p>
+				<p class="suggestions">Cookies</p>
+				<p class="suggestions">Keto pancakes</p>
+				<p class="suggestions">Pumpkin spice</p>
+				<p class="suggestions">Cauliflower</p>
+				<p class="suggestions">Gochujang</p>
+				<p class="suggestions">Keto cheesecake</p>
+			</div>
+		</div>
+	</div>
+</div>

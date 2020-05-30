@@ -1,0 +1,32 @@
+<h1 class="results-header">Search results for {{searchTerm}}</h1>
+<p class="showing">{{oldOffset}} - {{newOffset}}</p>
+
+<div class="row card-columns">
+{{#each items}}
+<div class="column">
+<div class="card h-100" style="width: 18rem;">
+  <img src={{this.imageUrl}} class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">{{this.title}}</h5>
+    <ul class="card-text">
+    	<li>Ready in {{this.minutes}} minutes</li>
+    	<li>Serves {{this.servings}}</li>
+    </ul>
+    <form action="/recipe" method="post" enctype="application/x-www-form-urlencoded">
+		  <input type="hidden" name="id" value={{this.id}}>
+		  <input class="btn btn-primary" type="submit" value="Get Full Recipe">
+	  </form>
+  </div>
+</div>
+</div>
+{{/each}}
+</div>
+
+<div class="button-block">
+  <form action="/search" method="post" enctype="application/x-www-form-urlencoded">
+        <input type="hidden" name="number" value={{newOffset}}>
+        <input type="hidden" name="searchTerm" value="{{searchTerm}}">
+        <input class="result-buttons btn btn-secondary btn-lg" type="submit" value="Next Page">
+  </form>
+  <button onclick="goBack()" class="result-buttons btn btn-secondary btn-lg">New Search</button>
+</div>
