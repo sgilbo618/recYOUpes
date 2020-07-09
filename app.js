@@ -185,6 +185,6 @@ app.use(function(err, req, res, next){
 });
 
 // server set u
-app.listen(app.get('port'), function(){
+app.listen(process.env.PORT || app.get('port'), function(){
 	console.log('Server is up at port ' + app.get('port') + 'press ctrl-c to terminate.');
 });
